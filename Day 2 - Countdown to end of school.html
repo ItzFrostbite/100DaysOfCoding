@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="icon" type="image/png" href="https://s3.amazonaws.com/peoplepng/wp-content/uploads/2018/11/12000815/School-PNG-Pic.png">
+  <head>
+    <meta charset="utf-8">
+    <title>Countdown To Schools Over </title>
+  </head>
+  <style>
+    html, body {
+      margin: 0;
+      background-image: url(https://wallpapertag.com/wallpaper/full/9/f/8/124950-popular-chalkboard-wallpaper-1920x1080-for-android-40.jpg);
+      background-size: cover;
+      font-family: "Courier New";
+      font-weight: bold;
+      color: Black;
+    }
+    header {
+      font-size: 50px;
+      text-align: center;
+      padding: 60px 0px 30px 0px;
+      text-shadow: 0px 2px 10px black;
+	    text-transform: capitalize;
+    }
+    .container {
+      display: grid;
+      text-align: center;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      text-shadow: 0px 2px 10px black;
+    }
+    .number {
+      font-size: 60px;
+    }
+
+    footer {
+      text-align: center;
+      text-transform: capitalize;
+      font-size: 50px;
+      color: white;
+}
+
+#left {
+  text-align: left;
+}
+
+
+a {
+  color: White;
+}
+
+  </style>
+  <body>
+    <header>Schools Over In:</header>
+    <br>
+<div class="container">
+  <div class="days">
+    <div class="number">0</div>
+    <div class="label">Days</div>
+  </div>
+
+  <div class="hours">
+    <div class="number">0</div>
+    <div class="label">Hours</div>
+  </div>
+
+  <div class="minutes">
+    <div class="number">0</div>
+    <div class="label">Minutes</div>
+  </div>
+
+  <div class="seconds">
+    <div class="number">0</div>
+    <div class="label">Seconds</div>
+  </div>
+</div>
+
+<div class="br">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+<footer>
+<iframe width="100%" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/496702374&color=%2380ade6&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe>
+</footer>
+<script>
+  const daysElement = document.querySelectorAll(".number")[0];
+const hoursElement = document.querySelectorAll(".number")[1];
+const minutesElement = document.querySelectorAll(".number")[2];
+const secondsElement = document.querySelectorAll(".number")[3];
+
+const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+let capodanno = new Date(2019,5,23,0,0,0).getTime();
+let timer = setInterval(update, 1000);
+
+function update() {
+let adesso = new Date().getTime();
+let d = capodanno - adesso;
+
+if(d < 0) {
+  clearInterval(timer);
+  for(let i=0; i<document.querySelectorAll(".number").length; i++) {
+    document.querySelectorAll(".number")[i].style.color = "brown";
+  }
+}
+else {
+  daysElement.innerHTML    = Math.floor(  d           / day - 31);
+  hoursElement.innerHTML   = Math.floor( (d % day)    / hour  );
+  minutesElement.innerHTML = Math.floor( (d % hour)   / minute);
+  secondsElement.innerHTML = Math.floor( (d % minute) / second);
+}
+}
+</script>
+  </body>
+</html>
