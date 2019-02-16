@@ -7,61 +7,39 @@ print(lengthOfWord, "Letters")
 print("Would you like to go again [Y/N]")
 again = input()
 
-if again == "Y":
+if again == "Y" or again == "y":
     print("Enter word to get length: ")
     word = input()
     lengthOfWord = (len(word))
     print(lengthOfWord, "Letters")
-    if again == "N":
-        print("Ok bye...")
-        bye = input()
-        quit()
-    if again == "n":
-        print("Ok bye...")
-        bye = input()
-        quit()
-
-#Lower Case y and n start
-
-if again == "y":
-    print("Enter word to get length: ")
-    word = input()
-    lengthOfWord = (len(word))
-    print(lengthOfWord, "Letters")
-    if again == "N":
-        print("Ok bye...")
-        bye = input()
-        quit()
-    if again == "n":
-        print("Ok bye...")
-        bye = input()
-        quit()
-
-
-if again == "n":
+elif again == "N" or again == "n":
     print("Ok bye...")
     bye = input()
     quit()
-
-#Lower Case y and n end
-
-if again == "N":
-    print("Ok bye...")
+else:
+    print("Invalid Response")
     bye = input()
     quit()
 
 while again != "N":
     print("Would you like to go again [Y/N]")
     again = input()
-    if again == "N":
+    if again == "N" or again == "n":
         print("Ok bye...")
         bye = input()
         quit()
-    if again == "n":
-        print("Ok bye...")
+    elif again == "Y" or again == "y":
+        print("Enter word to get length: ")
+        word = input()
+        lengthOfWord = (len(word))
+        print(lengthOfWord, "Letters")
+    else:
+        print("Invalid Response")
         bye = input()
         quit()
-    print("Enter word to get length: ")
-    word = input()
-    lengthOfWord = (len(word))
-    print(lengthOfWord, "Letters")
+
+
+print("Enter word to get length: ")
+word = input()
+lengthOfWord = (len(word))
+print(lengthOfWord, "Letters")
