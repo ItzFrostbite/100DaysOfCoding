@@ -1,5 +1,5 @@
-print("Welcome To The Calculater Made By ItzFrostbite")
-print("Enter Equasion To Get Started")
+print("Welcome To The Calculator Made By ItzFrostbiteTv")
+print("Enter Equation To Get Started")
 
 type = input("Enter +,-,*,/,%: ")
 
